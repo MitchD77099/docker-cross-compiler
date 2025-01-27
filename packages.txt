@@ -1,4 +1,5 @@
 antlr3
+apt-utils
 autoconf
 autoconf-archive
 autogen
