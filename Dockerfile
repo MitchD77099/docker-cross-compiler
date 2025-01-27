@@ -41,9 +41,11 @@ RUN set -x; \
     groupadd -r -g $GROUP_ID drobo && \
     useradd -r -u $USER_ID -g drobo -G sudo drobo && \
     echo drobo:drobo | chpasswd
+    
+COPY cp /Users/mtdailey/Downloads/drobo-20221125/updates.drobo.com/droboapps/development/SDK-2.1.zip /tmp
 
 RUN set -x; \
-    wget -O /tmp/SDK-2.1.zip ftp://updates.drobo.com/droboapps/development/SDK-2.1.zip && \
+    # wget -O /tmp/SDK-2.1.zip ftp://updates.drobo.com/droboapps/development/SDK-2.1.zip && \
     unzip -d /tmp/ /tmp/SDK-2.1.zip && \
     mkdir -p /home/drobo/xtools/toolchain/5n && \
     tar -zxf "/tmp/DroboApps SDK 2.1/arm7-tools.gz" -C /home/drobo/xtools/toolchain/5n && \
