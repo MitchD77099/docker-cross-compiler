@@ -43,7 +43,7 @@ RUN set -x; \
     echo drobo:drobo | chpasswd
     
 #COPY /home/mtdailey/SDK-2.1.zip /tmp
-COPY --from=my-context SDK-2.1.zip /tmp
+COPY SDK-2.1.zip /tmp
 
 RUN set -x; \
     # wget -O /tmp/SDK-2.1.zip ftp://updates.drobo.com/droboapps/development/SDK-2.1.zip && \
