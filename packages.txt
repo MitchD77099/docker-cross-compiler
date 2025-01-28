@@ -74,6 +74,7 @@ php-cli
 php-common
 php-json
 php-readline
+pip
 pkg-config
 python2.7
 python3
