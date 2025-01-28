@@ -5,6 +5,10 @@
 ```
 docker build --tag="drobo/cross-compiler:20.04" https://github.com/drobo/docker-cross-compiler.git
 ```
+```
+docker buildx build --tag="drobo/cross-compiler:20.04" https://github.com/MitchD77099/docker-cross-compiler.git
+```
+
 
 ## Start a temporary interactive container
 
