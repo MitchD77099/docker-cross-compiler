@@ -42,7 +42,8 @@ RUN set -x; \
     useradd -r -u $USER_ID -g drobo -G sudo drobo && \
     echo drobo:drobo | chpasswd
     
-COPY /home/mtdailey/SDK-2.1.zip /tmp
+#COPY /home/mtdailey/SDK-2.1.zip /tmp
+COPY --from=my-context SDK-2.1.zip /tmp
 
 RUN set -x; \
     # wget -O /tmp/SDK-2.1.zip ftp://updates.drobo.com/droboapps/development/SDK-2.1.zip && \
