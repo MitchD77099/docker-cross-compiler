@@ -1,5 +1,5 @@
-#FROM ubuntu:20.04
-FROM ubuntu:24.04
+FROM ubuntu:20.04
+#FROM ubuntu:24.04
 
 ENV USER_ID 1000
 ENV GROUP_ID 1000
