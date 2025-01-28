@@ -31,7 +31,6 @@ file
 flex
 g++
 gcc
-gcc-arm-none-eabi
 gettext
 git
 git-svn
