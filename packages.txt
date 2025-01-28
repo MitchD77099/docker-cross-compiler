@@ -23,7 +23,7 @@ cpio
 cpp
 curl
 cvs
-cython3
+cython
 diffutils
 distcc
 distcc-pump
