@@ -23,6 +23,9 @@ RUN set -x; \
     apt-get clean && \
     apt-get autoclean
 
+RUN set -x; \
+    pip install cmake --upgrade --prefix /usr
+
 # NodeJS and npm
 RUN set -x; \
     curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && \
