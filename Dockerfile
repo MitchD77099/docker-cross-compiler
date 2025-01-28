@@ -67,6 +67,13 @@ RUN set -x; \
     tar -axf /tmp/arm-drobo_x86_64-linux-gnueabihf.tar.xz -C /home/drobo/xtools/toolchain/arm-drobo_x86_64-linux-gnueabihf && \
     rm -fr /tmp/arm-drobo_x86_64-linux-gnueabihf.tar.xz
 
+# Updated version of toolchain with recent gcc
+RUN set -x; \
+    wget -O /tmp/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi.tar.xz https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi.tar.xz && \
+    mkdir -p /home/drobo/xtools/toolchain/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi && \
+    tar -axf /tmp/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi.tar.xz -C /home/drobo/xtools/toolchain/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi && \
+    rm -fr /tmp/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi.tar.xz 
+
 # Python cross-compiler
 RUN set -x; \
     wget -O /tmp/xpython2.tgz https://github.com/droboports/python2/releases/download/v${PYTHON_VERSION}/xpython2.tgz && \
