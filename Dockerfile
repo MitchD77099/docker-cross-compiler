@@ -24,7 +24,7 @@ RUN set -x; \
     apt-get autoclean
 
 RUN set -x; \
-    pip install cmake --upgrade --prefix /usr
+    pip install cmake --upgrade
 
 # NodeJS and npm
 RUN set -x; \
